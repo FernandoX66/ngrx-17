@@ -1,0 +1,42 @@
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+  style="
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 10px;
+  "
+>
+  <mat-form-field appearance="outline">
+    <mat-label>Title</mat-label>
+    <input type="text" matInput formControlName="title" />
+  </mat-form-field>
+
+  <mat-label>
+    <mat-checkbox formControlName="completed"></mat-checkbox>
+    Done
+  </mat-label>
+
+  <button type="submit" mat-raised-button>Add</button>
+</form>
+
+<div class="todos">
+  <h1>Todos:</h1>
+
+  @for (todo of todosStore.todos(); track $index) {
+  <div class="todo">
+    <h3>{{ todo.title }}</h3>
+  </div>
+  }
+
+  <h1>Completed todos:</h1>
+
+  @for (completedTodo of todosStore.completedTodos(); track $index) {
+  <div class="todo">
+    <h3>{{ completedTodo.title }}</h3>
+  </div>
+  }
+</div>

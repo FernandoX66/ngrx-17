@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "title": "Play soccer",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "title": "Play videogames",
+      "completed": true,
+      "id": 2
+    },
+    {
+      "title": "Watch videogames",
+      "completed": true,
+      "id": 3
+    },
+    {
+      "title": "Study Angular",
+      "completed": false,
+      "id": 4
+    }
+  ]
+}
